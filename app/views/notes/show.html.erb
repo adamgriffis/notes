@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Note</h1>
+  <h3><%= @note.title %></h3>
+  <div class="description">
+    <p><%= @note.description %></p>
+  </div>
+  <p>created at: <%= @note.created_at.strftime('%m/%d/%Y') %></p>
+  <p>updated at: <%= @note.updated_at.strftime('%m/%d/%Y') %></p>
+  <%= link_to 'Edit', edit_note_path(@note), class:"edit-button wide-button" %>
+  <%= link_to 'Delete', note_path(@note), :method => 'delete', class:"delete-button wide-button" %>
+  <%= link_to 'Home', root_path, class:"home-button wide-button" %>
+</div>

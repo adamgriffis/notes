@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Notes</title>
+    <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,800" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <div class="container flash">
+      <% flash.each do |message| %>
+        <p><%= message[1] %></p>
+      <% end %>
+    </div>
+    <%= yield %>
+  </body>
+</html>
